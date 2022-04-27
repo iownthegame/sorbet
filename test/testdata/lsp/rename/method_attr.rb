@@ -7,8 +7,20 @@ class Foo
 # ^ apply-rename: [E] invalid: true
   attr_writer :bar
 #              ^ apply-rename: [C] invalid: true
+#      ^ apply-rename: [I] invalid: true
+#             ^ apply-rename: [K] invalid: true
   attr_accessor :baz
 #                ^ apply-rename: [D] invalid: true
+#     ^ apply-rename: [J] invalid: true
+  attr_reader "strfoo"
+#              ^ apply-rename: [L] invalid: true
+#             ^ apply-rename: [M] invalid: true
+  attr_writer "strbar"
+#              ^ apply-rename: [N] invalid: true
+#             ^ apply-rename: [O] invalid: true
+  attr_accessor "strbaz"
+#                ^ apply-rename: [P] invalid: true
+#               ^ apply-rename: [Q] invalid: true
 end
 
 f = Foo.new
