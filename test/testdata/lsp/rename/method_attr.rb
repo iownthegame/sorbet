@@ -21,6 +21,15 @@ class Foo
   attr_accessor "strbaz"
 #                ^ apply-rename: [P] invalid: true
 #               ^ apply-rename: [Q] invalid: true
+  attr_reader 'sqstrfoo'
+#              ^ apply-rename: [R] invalid: true
+#             ^ apply-rename: [S] invalid: true
+  attr_writer 'sqstrbar'
+#              ^ apply-rename: [T] invalid: true
+#             ^ apply-rename: [U] invalid: true
+  attr_accessor 'sqstrbaz'
+#                ^ apply-rename: [V] invalid: true
+#               ^ apply-rename: [W] invalid: true
 end
 
 f = Foo.new
